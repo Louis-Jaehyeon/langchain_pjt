@@ -7,6 +7,7 @@ langchain project_investment report
 
 * 코드 상에서 .은 상위 폴더를 의미
 
+'''
 기본 환경 셋팅
 - 콘다 가상환경 만들고, 활성화 하기
 conda create -n lc_env python=3.12
@@ -34,4 +35,9 @@ pip install tabulate
 - 웹 backend, frontend 개발
 pip install streamlit
 
+'''
+
+# 실행 방법
+'''
+streamlit run main_app.py
 '''
