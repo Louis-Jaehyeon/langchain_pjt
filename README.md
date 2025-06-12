@@ -37,7 +37,12 @@ pip install streamlit
 
 '''
 
-# 실행 방법
+# 앱 실행 방법
 '''
 streamlit run main_app.py
+'''
+
+# meilisearch 실행 방법
+'''
+./meilisearch --master-key="MEILISEARCH_API"
 '''

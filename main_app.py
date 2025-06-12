@@ -1,6 +1,6 @@
 # streamlit run main_app.py
 import streamlit as st
-# from report_service import investment_report
+from report_service import investment_report
 # from search_index import SearchResult, search_compay
 from stock_info import Stock
 
@@ -27,3 +27,12 @@ with tab1:
 # LLM이 만든 투자 보고서 출력
 with tab2:
     st.header(f"{company_selected} AI 투자보고서 생성")
+    
+    # AI 투자 보고서 출력
+    if st.button("투자 보고서 생성"):
+        with st.spinner(text="투자 보고서 생성 중"):
+            symbol, name = company_selected.split(": ")
+            report = investment_report(name, symbol)
+            #report = investment_report(company_selected.name, company_selected.symbol)
+            st.success("투자 보고서 생성 완료")
+        st.write(report)
